@@ -29,3 +29,13 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# VSCode
+.DS_Store
+
+# Environment variables
+.env*
+!.env.example
+
+# Tests
+/coverage

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorld.vue renders props.msg when passed 1`] = `
+<v-app-stub id="app">
+  <v-product-header-stub></v-product-header-stub>
+  <v-main-stub tag="main">
+    <v-container-stub tag="div" fluid="true" class="px-0 py-0"></v-container-stub>
+  </v-main-stub>
+  <v-footer-stub height="auto" tag="footer" class="white py-12 d-flex flex-column justify-center align-center">
+    <p class="text-subtitle1 text--secondary">
+      common.thankYouForPurchase
+    </p>
+    <p class="text-body2 text--secondary">
+      Copyright ©
+      app.title
+      2022.
+    </p>
+  </v-footer-stub>
+</v-app-stub>
+`;

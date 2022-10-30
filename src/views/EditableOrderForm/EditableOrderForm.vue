@@ -84,6 +84,7 @@ export default Vue.extend({
 	},
 	methods: {
 		updateView(cartItems: CartItem[], order: Order) {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const statusHistory = (order.statusHistory || []) as any;
 
 			this.cartItems = cartItems;
@@ -92,6 +93,7 @@ export default Vue.extend({
 
 			const lastStatus = statusHistory[statusHistory.length - 1];
 
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			this.statusSelectValue = lastStatus?.status as any;
 		},
 		fetchExistingOrder(orderId: string) {
@@ -107,6 +109,7 @@ export default Vue.extend({
 						count: cart.count,
 					}));
 
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					this.updateView(cartItems as any, order as any);
 				})
 				.finally(() => {

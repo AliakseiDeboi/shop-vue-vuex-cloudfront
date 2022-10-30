@@ -35,7 +35,7 @@
 					type="number"
 					:label="$t('products.price')"
 					name="price"
-					v-model="price"
+					v-model.number="price"
 					:rules="validationRules"
 				></v-text-field>
 			</v-col>
@@ -45,7 +45,7 @@
 					type="number"
 					name="count"
 					:label="$t('products.count')"
-					v-model="count"
+					v-model.number="count"
 					:rules="validationRules"
 				></v-text-field>
 			</v-col>

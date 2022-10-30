@@ -1,7 +1,7 @@
 export const API_PATHS = {
-	product: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
-	order: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
-	import: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
-	bff: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
-	cart: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
+	product: process.env.VUE_APP_BFF_URL,
+	order: process.env.VUE_APP_BFF_URL,
+	import: process.env.VUE_APP_BFF_URL,
+	bff: process.env.VUE_APP_BFF_URL,
+	cart: process.env.VUE_APP_BFF_URL,
 };

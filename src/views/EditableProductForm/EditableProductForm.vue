@@ -92,7 +92,8 @@ export default Vue.extend({
 			this.isFetching = true;
 
 			try {
-				this.product = await productApi.fetchProductById(id);
+				const productResponse = await productApi.fetchProductById(id);
+				this.product = productResponse?.product || emptyProductStub;
 			} catch (e) {
 				this.showSnackbarWithMessage(e.message);
 			} finally {
@@ -112,7 +113,11 @@ export default Vue.extend({
 			this.isFetching = true;
 
 			try {
-				await productApi.saveProduct(values);
+				if (this.isEditableMode) {
+					await productApi.saveProduct(this.product.id, values);
+				} else {
+					await productApi.createProduct(values);
+				}
 
 				this.$router.push('/admin/products');
 			} catch (e) {

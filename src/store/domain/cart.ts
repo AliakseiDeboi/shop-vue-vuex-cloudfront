@@ -19,6 +19,7 @@ interface CartState {
 	errorMessage: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cartModuleStore: Module<CartState, any> = {
 	namespaced: true,
 	state: {

@@ -12,6 +12,8 @@ const deleteOrderById = (id: string) => {
 };
 
 const fetchOrderById = (id: string) => {
+	console.log('fetchOrderById: ' + id);
+
 	return orderList[0];
 	/* TODO: uncomment when time comes
 	return axios.get(`${API_PATHS.order}/order/${id}`);
